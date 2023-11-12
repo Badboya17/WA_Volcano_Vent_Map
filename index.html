@@ -84,9 +84,9 @@
             async function geojsonFetch() {
 
                 let response, Volcanic_Vents, WA, table;
-                response = await fetch('assets/Volcanic_Vents.geojson');
+                response = await fetch('/assets/Volcanic_Vents.geojson');
                 Volcanic_Vents = await response.json();
-                response = await fetch('assets/wa.json');
+                response = await fetch('/assets/wa.json');
                 WA = await response.json();
 
                 table = document.getElementsByTagName("table")[0];

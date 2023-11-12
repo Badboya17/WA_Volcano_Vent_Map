@@ -75,7 +75,7 @@
             mapboxgl.accessToken = 'pk.eyJ1IjoiamFrb2J6aGFvIiwiYSI6ImNpcms2YWsyMzAwMmtmbG5icTFxZ3ZkdncifQ.P9MBej1xacybKcDN_jehvw';
             let map = new mapboxgl.Map({
                 container: 'map', // container ID
-                style: 'mapbox://styles/mapbox/streets-v12', // style URL
+                style: 'mapbox://styles/mapbox/satellite-v9', // style URL
                 zoom: 5.5, // starting zoom
                 center: [138, 38] // starting center
             });
@@ -83,9 +83,9 @@
             async function geojsonFetch() {
 
                 let response, earthquakes, japan, table;
-                response = await fetch('assets/earthquakes.geojson');
+                response = await fetch('/assets/earthquakes.geojson');
                 earthquakes = await response.json();
-                response = await fetch('assets/japan.json');
+                response = await fetch('/assets/japan.json');
                 japan = await response.json();
 
                 table = document.getElementsByTagName("table")[0];
